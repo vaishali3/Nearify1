@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/animation_list">
+    android:background="@color/materialRed">
 
     <LinearLayout
         android:id="@+id/heading"
@@ -12,16 +12,6 @@
         android:layout_above="@id/details"
         android:orientation="vertical"
         >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:layout_weight="4"
-            android:scaleType="fitCenter"
-            android:src="@drawable/front_cover" />
 
         <!--<ImageView-->
             <!--android:id="@+id/logo"-->
@@ -41,14 +31,16 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/login_button"
         android:layout_centerHorizontal="true"
-        android:layout_margin="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:paddingBottom="22dp"
-        android:text="Event Details in the Campus! Now get all the information related to events on a single platform!"
+
+        android:text="Discover Events near You!"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="12dp"
-
-        />
+        android:textSize="24sp" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
@@ -61,7 +53,8 @@
         android:paddingBottom="15dp"
         android:paddingLeft="10dp"
         android:paddingTop="15dp"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:clickable="false"/>
 
     <View
         android:id="@+id/view_b"
@@ -82,5 +75,19 @@
         android:text="Are you an Admin? Tap Here!"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="109dp"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:text="WELCOME TO NEARIFY"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        />
+
 
 </RelativeLayout>

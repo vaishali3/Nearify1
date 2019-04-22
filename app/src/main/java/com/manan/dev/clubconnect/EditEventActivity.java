@@ -98,7 +98,7 @@ public class EditEventActivity extends AppCompatActivity {
     public static final String REQ_PARA_EVENT_TYPE = "event_type";
 
     private static final String TAG = "EditEventActivity";
-
+    String x;
     Event event;
 
     private Map<String, Coordinator> coordinatorsAll;
@@ -199,7 +199,9 @@ public class EditEventActivity extends AppCompatActivity {
             finish();
             return;
         }
-        event.setClubName(user.getDisplayName());
+        if(user.getEmail().equals("vaishali.saluja98@gmail.com"))
+            x="vaishali";
+        event.setClubName(x);
 
         coordinatorsAll = new HashMap<>();
         posters = new ArrayList<>();
@@ -371,14 +373,23 @@ public class EditEventActivity extends AppCompatActivity {
         phone.clear();
         email.clear();
         photo.clear();
-        for (String coordId : event.getCoordinatorID()) {
-            Coordinator coord = coordinatorsAll.get(coordId);
-            if (coord == null)
-                continue;
-            name.add(coord.getName());
-            phone.add(coord.getPhone());
-            email.add(coord.getEmail());
-            photo.add(coord.getPhoto());
+        if(FirebaseAuth.getInstance().getCurrentUser().getEmail().equals("vaishali.saluja98@gmail.com")){
+            name.add("Vaishali");
+            phone.add("123457890");
+            email.add("vaishali.saluja98@gmail.com");
+            photo.add("https://graph.facebook.com/1396264647183023/picture");
+        }
+        else {
+            for (String coordId : event.getCoordinatorID()) {
+                Coordinator coord = coordinatorsAll.get(coordId);
+                if (coord == null)
+                    continue;
+                name.add(coord.getName());
+                phone.add(coord.getPhone());
+                email.add(coord.getEmail());
+                photo.add(coord.getPhoto());
+
+            }
         }
     }
 
@@ -716,10 +727,10 @@ public class EditEventActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.save_event:
-                if (isOnline)
+               // if (isOnline)
                     uploadEvent();
-                else
-                    Toast.makeText(this, "Sorry! You are offline!", Toast.LENGTH_SHORT).show();
+//                else
+//                    Toast.makeText(this, "Sorry! You are offline!", Toast.LENGTH_SHORT).show();
                 return true;
             case android.R.id.home:
                 onBackPressed();

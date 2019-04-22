@@ -4,7 +4,7 @@
     android:id="@+id/admin_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/animation_list2">
+    android:background="#def7dd">
 
     <LinearLayout
         android:id="@+id/ll_adminzone"
@@ -13,25 +13,6 @@
         android:layout_above="@id/heading_admin"
         android:orientation="vertical"
         android:weightSum="5">
-
-        <ImageView
-            android:id="@+id/logo_admin"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="10dp"
-            android:layout_weight="3"
-            android:src="@drawable/back_admin" />
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:src="@drawable/name_logo" />
     </LinearLayout>
 
     <TextView
@@ -40,10 +21,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/text_admin"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="93dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Admin Portal"
-        android:textColor="#ffffff"
+        android:textColor="#000"
         android:textSize="40sp" />
 
     <TextView
@@ -52,9 +34,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/usernameAdmin"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Clubs Can Login Here! Create and Manipulate Events"
-        android:textColor="#ffffff" />
+        android:text="Login Here to Add and Manipulate Events"
+        android:textColor="#000"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/usernameAdmin"
@@ -62,14 +46,15 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/passwordAdminly"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/border_signin_admin"
         android:hint="Username"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#eee" />
+        android:textColor="#000"
+        android:textColorHint="#000" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/passwordAdminly"
@@ -77,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/ll_adminzone2"
         android:hint=" "
-        android:textColorHint="#fff"
+        android:textColorHint="#000"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#FFF">
@@ -96,7 +81,7 @@
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@android:color/white"
-            android:textColorHint="#eee" />
+            android:textColorHint="#000" />
     </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
@@ -113,14 +98,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/ripple_effect"
+            android:background="#000"
             android:gravity="center"
-            android:paddingBottom="15dp"
             android:paddingLeft="10dp"
             android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:shadowColor="#000000"
             android:text="Sign In"
-            android:textColor="#ffffff" />
+            android:textColor="#fff"
+            android:textSize="18sp" />
 
         <!--<Button-->
         <!--android:id="@+id/signUpAsAdminbtn"-->
@@ -143,7 +129,7 @@
         android:layout_height="2dp"
         android:layout_above="@id/back_to_login"
         android:layout_centerHorizontal="true"
-        android:background="#ffffff" />
+        android:background="#000" />
 
     <TextView
         android:id="@+id/back_to_login"
@@ -154,6 +140,6 @@
         android:gravity="center"
         android:padding="16dp"
         android:text="Back to Login Screen"
-        android:textColor="#ffffff"
+        android:textColor="#000"
         android:textSize="20sp" />
 </RelativeLayout>

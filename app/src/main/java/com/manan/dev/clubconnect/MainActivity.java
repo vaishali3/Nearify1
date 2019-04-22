@@ -17,6 +17,8 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -47,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
         containeer = (RelativeLayout) findViewById(R.id.container);
-        TransitionDrawable trans = (TransitionDrawable) containeer.getBackground();
-        trans.startTransition(8000);
+        //TransitionDrawable trans = (TransitionDrawable) containeer.getBackground();
+        //
+        // trans.startTransition(8000);
 
         //setTheme(android.R.style.Theme_Black_NoTitleBar_Fullscreen);
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         //LogInStub("de");
         loginButton = (LoginButton) findViewById(R.id.login_button);
+        //loginButton.setEnabled(false);
         toAdminZone = (TextView) findViewById(R.id.to_admin_zone);
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -77,34 +82,35 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, AdminZoneActivity.class));
             }
         });
-        loginButton.setReadPermissions("email", "public_profile");
-        callbackManager = CallbackManager.Factory.create();
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG, "facebook:onSuccess:" + loginResult);
-
-                //String accessToken = loginResult.getAccessToken().getToken();
-                // save accessToken to SharedPreference
-                //saveAccessToken(accessToken);
-                handleFacebookAccessToken(loginResult.getAccessToken());
-
-                //Toast.makeText(MainActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onCancel() {
-                Log.d(TAG, "facebook:onCancel");
-                Toast.makeText(MainActivity.this, "Login Cancelled!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Log.d(TAG, "facebook:onError", error);
-                Toast.makeText(MainActivity.this, "Login Error! " + error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        loginButton.setReadPermissions("email", "public_profile");
+//        callbackManager = CallbackManager.Factory.create();
+//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+//
+//                //String accessToken = loginResult.getAccessToken().getToken();
+//                // save accessToken to SharedPreference
+//                //saveAccessToken(accessToken);
+//                //Toast.makeText(MainActivity.this, "Login Successful!"+loginResult, Toast.LENGTH_SHORT).show();
+//                handleFacebookAccessToken(loginResult.getAccessToken());
+//
+//                //Toast.makeText(MainActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//                Log.d(TAG, "facebook:onCancel");
+//                Toast.makeText(MainActivity.this, "Login Cancelled!", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//                Log.d(TAG, "facebook:onError", error);
+//                Toast.makeText(MainActivity.this, "Login Error! " + error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
         pd = new ProgressDialog(this);
@@ -114,26 +120,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-
-    private void handleFacebookAccessToken(AccessToken token) {
-        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
-        pd.show();
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (!task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "Login UnSuccessful!", Toast.LENGTH_SHORT).show();
-                        }
-                        pd.hide();
-                    }
-                });
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        callbackManager.onActivityResult(requestCode, resultCode, data);
+//    }
+//
+//    private void handleFacebookAccessToken(AccessToken token) {
+//        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+//        pd.show();
+//        mAuth.signInWithCredential(credential)
+//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (!task.isSuccessful()) {
+//                            Toast.makeText(MainActivity.this, "Login UnSuccessful!", Toast.LENGTH_SHORT).show();
+//                        }
+//                        pd.hide();
+//                    }
+//                });
+//    }
 
     void LogInStub(String s) {
         FirebaseUser currentUser = mAuth.getCurrentUser();

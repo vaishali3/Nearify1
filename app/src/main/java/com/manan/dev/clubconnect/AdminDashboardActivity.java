@@ -50,7 +50,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_dashboard);
         mAuth = FirebaseAuth.getInstance();
         clubName = mAuth.getCurrentUser().getDisplayName();
-        FirebaseMessaging.getInstance().subscribeToTopic(mAuth.getCurrentUser().getDisplayName());
+        if(mAuth.getCurrentUser().getEmail().equals("vaishali.saluja98@gmail.com"))
+            clubName="vaishali";
+        FirebaseMessaging.getInstance().subscribeToTopic(clubName);
         MovableFloatingActionButton addNewEventFab = findViewById(R.id.add_new_event_fab);
         //addNewEventFab.setBackgroundTintList(ColorStateList.valueOf(R.color.darkBlack));
         //.withAlpha(R.color.cardview_shadow_start_color));

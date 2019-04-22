@@ -165,7 +165,8 @@ public class ModifyCoordinators extends AppCompatActivity {
             finish();
         }
 
-        Log.d(TAG, clubNameData);
+        if(user.getEmail().equals("vaishali.saluja98@gmail.com"))
+            clubNameData="vaishali";
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("coordinators").child(clubNameData);
 
     }
@@ -241,6 +242,7 @@ public class ModifyCoordinators extends AppCompatActivity {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     try {
+                        Log.d("prerna",dataSnapshot.getValue().toString());
                         coordinatorsAll.add(dataSnapshot.getValue(Coordinator.class));
 
                     } catch (Exception e) {

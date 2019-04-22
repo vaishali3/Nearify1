@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/venice"
+    android:background="#def7dd"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.manan.dev.clubconnect.DashboardUserActivity"
+    tools:context="com.manan.d0ev.clubconnect.DashboardUserActivity"
     tools:showIn="@layout/app_bar_dashboard_user">
 
     <TextView
         android:id="@+id/tvFaltu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="2dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="10dp"
-        android:text="Clubs"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:text="Interests"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <HorizontalScrollView
         android:id="@+id/hsv_clubs_name"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvFaltu"
         android:scrollbars="none">
@@ -36,122 +36,122 @@
 
             <TextView
                 android:id="@+id/manan"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Manan"
+                android:padding="15dp"
+                android:text="Coding"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/vividha"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Vividha"
+                android:padding="15dp"
+                android:text="Drama"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/ananya"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Ananya"
+                android:padding="15dp"
+                android:text="Literature"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/jhalak"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Jhalak"
+                android:padding="15dp"
+                android:text="Photography"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/samarpan"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Samarpan"
+                android:padding="15dp"
+                android:text="Techno"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/srijan"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Srijan"
+                android:padding="15dp"
+                android:text="Fine Arts"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/nataraja"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Nataraja"
+                android:padding="15dp"
+                android:text="Dance"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/microbird"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Microbird"
+                android:padding="15dp"
+                android:text="Electronics"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/mechnext"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="MechNext"
+                android:padding="15dp"
+                android:text="Mechanics"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/taranum"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_club"
                 android:clickable="true"
                 android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="Taranum"
+                android:padding="15dp"
+                android:text="Music"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
@@ -162,6 +162,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/hsv_clubs_name"
+
         android:scrollbars="none" />
 
     <ProgressBar

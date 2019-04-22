@@ -12,8 +12,8 @@
     <application
         android:name=".Utilitites.ApplicationClass"
         android:allowBackup="true"
-        android:icon="@drawable/temp_logo"
-        android:label="Club Connect"
+        android:icon="@drawable/logo"
+        android:label="Nearify"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:largeHeap="true"

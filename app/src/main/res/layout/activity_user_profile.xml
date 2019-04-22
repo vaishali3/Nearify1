@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.manan.dev.clubconnect.user.UserProfileActivity">
+    tools:context="com.manan.dev.clubconnect.user.UserProfileActivity"
+    android:background="#def7dd">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,19 +34,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:singleLine="true"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
-                android:hint="Name" />
+                android:layout_marginBottom="10dp"
+                android:hint="Name"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/user_profile_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:hint="Phone No." />
+                android:hint="Phone No."
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/et_RollNo"
@@ -51,8 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:singleLine="true"
-                android:hint="Roll Number" />
+                android:hint="Roll Number"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/et_email"
@@ -60,8 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:inputType="textEmailAddress"
-                android:hint="Email Id" />
+                android:hint="Email Id"
+                android:inputType="textEmailAddress" />
 
             <Spinner
                 android:id="@+id/spinner1"
@@ -74,102 +77,121 @@
                 android:tag="Year" />
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_weight="1"
-                style="@style/AppTheme.User"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown"
-                android:tag="Year" />
+                android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/spinner3"
-                style="@style/AppTheme.User"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown"
-                android:tag="Year" />
-</LinearLayout>
+                <Spinner
+                    android:id="@+id/spinner2"
+                    style="@style/AppTheme.User"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:tag="Year" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    style="@style/AppTheme.User"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:tag="Year" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Select the Club"
-                    android:textSize="18dp"
-                    />
+                    android:textSize="18dp" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#000"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:background="#000" />
+
                 <LinearLayout
                     android:id="@+id/club_radiogrp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Manan"
-                    android:text="Manan">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Srijan" android:text="Srijan">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Ananya" android:text="Ananya">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                        android:id="@+id/Vividha" android:text="Vividha">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Microbird" android:text="Microbird">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Jhalak" android:text="Jhalak">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Samarpan" android:text="Samarpan">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Natraja" android:text="Natraja">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Mechnext" android:text="Mechnext">
-                </CheckBox>
-                <CheckBox android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Tarannum" android:text="Tarannum">
-                </CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Manan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manan"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Srijan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Srijan"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Ananya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ananya"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Vividha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vividha"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Microbird"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Microbird"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Jhalak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jhalak"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Samarpan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Samarpan"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Natraja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Natraja"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Mechnext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mechnext"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/Tarannum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tarannum"></CheckBox>
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
-
 
 
     </ScrollView>

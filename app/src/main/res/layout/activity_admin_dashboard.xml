@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
+    android:background="#def7dd"
     tools:context="com.manan.dev.clubconnect.AdminDashboardActivity">
 
     <android.support.v7.widget.RecyclerView

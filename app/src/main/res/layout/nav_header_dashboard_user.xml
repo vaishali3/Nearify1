@@ -10,7 +10,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="40dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:backgroundTint="#000000">
 
     <ImageView
         android:id="@+id/fbImageView"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textSize="20sp"
+        android:textColor="#ffffff"
         android:text="Android Studio"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

@@ -41,8 +41,8 @@ public class AdminZoneActivity extends AppCompatActivity {
 //        }
 
         rlAdminzone = (RelativeLayout) findViewById(R.id.admin_container);
-        TransitionDrawable trans = (TransitionDrawable) rlAdminzone.getBackground();
-        trans.startTransition(6000);
+//        TransitionDrawable trans = (TransitionDrawable) rlAdminzone.getBackground();
+//        trans.startTransition(6000);
 
         //  Window window = activity.getWindow();
 
@@ -61,11 +61,11 @@ public class AdminZoneActivity extends AppCompatActivity {
         passwordAdminEditText = (EditText) findViewById(R.id.passwordAdmin);
 
         loginAsAdminBtn = (Button) findViewById(R.id.loginAsAdminbtn);
-        // signUpAsAdminBtn = (Button) findViewById(R.id.signUpAsAdminbtn);
+        //signUpAsAdminBtn = (Button) findViewById(R.id.signUpAsAdminbtn);
         backToLoginScreen = (TextView) findViewById(R.id.back_to_login);
 
-        usernameAdminEditText.setText("manantechnosurge@gmail.com");
-        passwordAdminEditText.setText("12345678");
+        usernameAdminEditText.setText("vaishali.saluja98@gmail.com");
+        passwordAdminEditText.setText("vaishali123");
 
         pd = new ProgressDialog(this);
         pd.setMessage("Loading...");
@@ -92,7 +92,7 @@ public class AdminZoneActivity extends AppCompatActivity {
             }
         });
 
-        //        signUpAsAdminBtn.setOnClickListener(new View.OnClickListener() {
+//                signUpAsAdminBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                attemptAdminSignUp();
